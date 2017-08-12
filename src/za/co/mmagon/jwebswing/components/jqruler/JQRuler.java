@@ -21,33 +21,34 @@ import za.co.mmagon.jwebswing.base.html.Div;
 /**
  * An implementation of the jsTree project.
  * <p>
+ *
  * @author Marc Magon
- * @since 29 Aug 2015
  * @version 1.0
+ * @since 29 Aug 2015
  */
 public class JQRuler extends Div<JQRulerChildren, JQRulerAttributes, JQRulerFeatures, JQRulerEvents, JQRuler>
 {
 
-    private static final long serialVersionUID = 1L;
-    private JQRulerFeature feature;
+	private static final long serialVersionUID = 1L;
+	private JQRulerFeature feature;
 
-    public JQRuler()
-    {
-        addFeature(getFeature());
-    }
+	public JQRuler()
+	{
+		addFeature(getFeature());
+	}
 
-    public final JQRulerFeature getFeature()
-    {
-        if (feature == null)
-        {
-            feature = new JQRulerFeature(this);
-        }
-        return feature;
-    }
+	public final JQRulerFeature getFeature()
+	{
+		if (feature == null)
+		{
+			feature = new JQRulerFeature(this);
+		}
+		return feature;
+	}
 
-    public JQRulerOptions getOptions()
-    {
-        return getFeature().getOptions();
-    }
+	public JQRulerOptions getOptions()
+	{
+		return getFeature().getOptions();
+	}
 
 }

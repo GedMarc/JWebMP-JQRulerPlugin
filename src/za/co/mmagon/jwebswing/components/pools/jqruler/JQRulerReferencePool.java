@@ -21,54 +21,53 @@ import za.co.mmagon.jwebswing.base.references.JavascriptReference;
 import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
 
 /**
- *
  * @author GedMarc
- * @since Mar 4, 2015
  * @version 1.0
+ * @since Mar 4, 2015
  */
 public enum JQRulerReferencePool implements ReferencePool
 {
 
-    /**
-     * The core of JQuery UI
-     */
-    CoreOriginal(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuides.js"), null, 80),
-    Core(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuidesJQuery.js"), null, 80),
-    Event(new JavascriptReference("JQRulerEvent", 1.0, "javascript/jquery.ruler/Event.js", "https://raw.githubusercontent.com/mark-rolich/Event.js/master/Event.js"),
-            null, 79),
-    DragDrop(new JavascriptReference("JQRulerDragDrop", 1.0, "javascript/jquery.ruler/Dragdrap.js"), null, 78),;
+	/**
+	 * The core of JQuery UI
+	 */
+	CoreOriginal(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuides.js"), null, 80),
+	Core(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuidesJQuery.js"), null, 80),
+	Event(new JavascriptReference("JQRulerEvent", 1.0, "javascript/jquery.ruler/Event.js", "https://raw.githubusercontent.com/mark-rolich/Event.js/master/Event.js"),
+	      null, 79),
+	DragDrop(new JavascriptReference("JQRulerDragDrop", 1.0, "javascript/jquery.ruler/Dragdrap.js"), null, 78),;
 
-    private JavascriptReference javaScriptReference;
-    private CSSReference cssReference;
+	private JavascriptReference javaScriptReference;
+	private CSSReference cssReference;
 
-    private JQRulerReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference, int sortOrder)
-    {
-        this.javaScriptReference = javaScriptReference;
-        this.cssReference = cssReference;
-    }
+	private JQRulerReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference, int sortOrder)
+	{
+		this.javaScriptReference = javaScriptReference;
+		this.cssReference = cssReference;
+	}
 
-    @Override
-    public JavascriptReference getJavaScriptReference()
-    {
-        return javaScriptReference;
-    }
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
 
-    @Override
-    public void setJavaScriptReference(JavascriptReference javaScriptReference)
-    {
-        this.javaScriptReference = javaScriptReference;
-    }
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
+	}
 
-    @Override
-    public CSSReference getCssReference()
-    {
-        return cssReference;
-    }
+	@Override
+	public CSSReference getCssReference()
+	{
+		return cssReference;
+	}
 
-    @Override
-    public void setCssReference(CSSReference cssReference)
-    {
-        this.cssReference = cssReference;
-    }
+	@Override
+	public void setCssReference(CSSReference cssReference)
+	{
+		this.cssReference = cssReference;
+	}
 
 }
