@@ -34,7 +34,7 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 
 	private final JQRuler forComponent;
 	private JQRulerOptions options;
-
+	
 	/**
 	 * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
 	 * <p>
@@ -48,6 +48,12 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 		getJavascriptReferences().add(JQRulerReferencePool.Event.getJavaScriptReference());
 		getCssReferences().add(JQRulerReferencePool.DragDrop.getCssReference());
 		getCssReferences().add(JQRulerReferencePool.Core.getCssReference());
+	}
+	
+	@Override
+	protected void assignFunctionsToComponent()
+	{
+	
 	}
 
 	/**
