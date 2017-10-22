@@ -65,14 +65,14 @@ public class JQRuler extends Div<JQRulerChildren, JQRulerAttributes, JQRulerFeat
 
 		JQRuler jqRuler = (JQRuler) o;
 
-		return getFeature() != null ? getFeature().equals(jqRuler.getFeature()) : jqRuler.getFeature() == null;
+		return getFeature().equals(jqRuler.getFeature());
 	}
 
 	@Override
 	public int hashCode()
 	{
 		int result = super.hashCode();
-		result = 31 * result + (getFeature() != null ? getFeature().hashCode() : 0);
+		result = 31 * result + getFeature().hashCode();
 		return result;
 	}
 
