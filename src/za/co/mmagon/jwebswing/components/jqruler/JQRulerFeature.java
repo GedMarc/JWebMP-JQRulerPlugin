@@ -32,9 +32,8 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 
 	private static final long serialVersionUID = 1L;
 
-	private final JQRuler forComponent;
 	private JQRulerOptions options;
-	
+
 	/**
 	 * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
 	 * <p>
@@ -44,16 +43,16 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 	public JQRulerFeature(JQRuler forComponent)
 	{
 		super("JQRuler");
-		this.forComponent = forComponent;
+		setComponent(forComponent);
 		getJavascriptReferences().add(JQRulerReferencePool.Event.getJavaScriptReference());
 		getCssReferences().add(JQRulerReferencePool.DragDrop.getCssReference());
 		getCssReferences().add(JQRulerReferencePool.Core.getCssReference());
 	}
-	
+
 	@Override
 	protected void assignFunctionsToComponent()
 	{
-	
+		//TODO
 	}
 
 	/**
@@ -70,5 +69,33 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 			options = new JQRulerOptions();
 		}
 		return options;
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof JQRulerFeature))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		JQRulerFeature that = (JQRulerFeature) o;
+		return getOptions() != null ? getOptions().equals(that.getOptions()) : that.getOptions() == null;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getOptions() != null ? getOptions().hashCode() : 0);
+		return result;
 	}
 }

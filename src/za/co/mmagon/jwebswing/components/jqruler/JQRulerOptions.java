@@ -25,8 +25,8 @@ import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
  *
  * @author GedMarc
  * @version 1.0
- * <p>
- * <p>
+ * 		<p>
+ * 		<p>
  * @since Mar 4, 2015
  */
 public class JQRulerOptions extends JavaScriptPart
@@ -34,7 +34,7 @@ public class JQRulerOptions extends JavaScriptPart
 
 	public JQRulerOptions()
 	{
-
+		//TODO
 	}
 
 	@Override

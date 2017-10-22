@@ -30,6 +30,7 @@ public class JQRuler extends Div<JQRulerChildren, JQRulerAttributes, JQRulerFeat
 {
 
 	private static final long serialVersionUID = 1L;
+
 	private JQRulerFeature feature;
 
 	public JQRuler()
@@ -46,9 +47,38 @@ public class JQRuler extends Div<JQRulerChildren, JQRulerAttributes, JQRulerFeat
 		return feature;
 	}
 
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof JQRuler))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		JQRuler jqRuler = (JQRuler) o;
+
+		return getFeature() != null ? getFeature().equals(jqRuler.getFeature()) : jqRuler.getFeature() == null;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + (getFeature() != null ? getFeature().hashCode() : 0);
+		return result;
+	}
+
+	@Override
 	public JQRulerOptions getOptions()
 	{
 		return getFeature().getOptions();
 	}
-
 }
