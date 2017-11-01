@@ -34,7 +34,7 @@ public class JQRulerOptions extends JavaScriptPart
 
 	public JQRulerOptions()
 	{
-		//TODO
+
 	}
 
 	@Override

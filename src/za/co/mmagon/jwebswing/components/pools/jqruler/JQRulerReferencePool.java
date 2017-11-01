@@ -44,6 +44,8 @@ public enum JQRulerReferencePool implements ReferencePool
 	{
 		this.javaScriptReference = javaScriptReference;
 		this.cssReference = cssReference;
+		this.javaScriptReference.setSortOrder(sortOrder);
+		this.cssReference.setSortOrder(sortOrder);
 	}
 
 	@Override
