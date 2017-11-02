@@ -52,6 +52,7 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 	@Override
 	protected void assignFunctionsToComponent()
 	{
+		//No queries needed
 	}
 
 	/**

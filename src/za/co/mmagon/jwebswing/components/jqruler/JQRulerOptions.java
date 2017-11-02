@@ -17,7 +17,6 @@
 package za.co.mmagon.jwebswing.components.jqruler;
 
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
 
 /**
  * All the options for the tooltip library
@@ -34,13 +33,7 @@ public class JQRulerOptions extends JavaScriptPart
 
 	public JQRulerOptions()
 	{
-
-	}
-
-	@Override
-	public JavascriptPartType getJavascriptType()
-	{
-		return JavascriptPartType.Javascript;
+		//Not setup yet
 	}
 
 }
