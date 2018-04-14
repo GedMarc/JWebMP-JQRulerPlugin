@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,18 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.pools.jqruler;
+package com.jwebmp.components.pools.jqruler;
 
-import za.co.mmagon.jwebswing.base.references.CSSReference;
-import za.co.mmagon.jwebswing.base.references.JavascriptReference;
-import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
+import com.jwebmp.base.references.CSSReference;
+import com.jwebmp.base.references.JavascriptReference;
+import com.jwebmp.base.servlets.interfaces.ReferencePool;
 
 /**
  * @author GedMarc
  * @version 1.0
  * @since Mar 4, 2015
  */
-public enum JQRulerReferencePool implements ReferencePool
+public enum JQRulerReferencePool
+		implements ReferencePool
 {
 
 	/**
@@ -33,31 +34,18 @@ public enum JQRulerReferencePool implements ReferencePool
 	 */
 	CoreOriginal(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuides.js"), null, 80),
 	Core(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuidesJQuery.js"), null, 80),
-	Event(new JavascriptReference("JQRulerEvent", 1.0, "javascript/jquery.ruler/Event.js", "https://raw.githubusercontent.com/mark-rolich/Event.js/master/Event.js"),
-	      null, 79),
+	Event(new JavascriptReference("JQRulerEvent", 1.0, "javascript/jquery.ruler/Event.js", "https://raw.githubusercontent.com/mark-rolich/Event.js/master/Event.js"), null, 79),
 	DragDrop(new JavascriptReference("JQRulerDragDrop", 1.0, "javascript/jquery.ruler/Dragdrap.js"), null, 78),;
 
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;
 
-	private JQRulerReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference, int sortOrder)
+	JQRulerReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference, int sortOrder)
 	{
 		this.javaScriptReference = javaScriptReference;
 		this.cssReference = cssReference;
 		this.javaScriptReference.setSortOrder(sortOrder);
 		this.cssReference.setSortOrder(sortOrder);
-	}
-
-	@Override
-	public JavascriptReference getJavaScriptReference()
-	{
-		return javaScriptReference;
-	}
-
-	@Override
-	public void setJavaScriptReference(JavascriptReference javaScriptReference)
-	{
-		this.javaScriptReference = javaScriptReference;
 	}
 
 	@Override
@@ -70,6 +58,18 @@ public enum JQRulerReferencePool implements ReferencePool
 	public void setCssReference(CSSReference cssReference)
 	{
 		this.cssReference = cssReference;
+	}
+
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
+
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
 	}
 
 }

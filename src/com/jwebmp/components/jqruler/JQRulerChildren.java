@@ -14,26 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.jqruler;
+package com.jwebmp.components.jqruler;
 
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.base.html.interfaces.GlobalChildren;
 
 /**
- * All the options for the tooltip library
- * <p>
- *
- * @author GedMarc
+ * @author Marc Magon
  * @version 1.0
- * 		<p>
- * 		<p>
- * @since Mar 4, 2015
+ * @since 07 Aug 2015
  */
-public class JQRulerOptions extends JavaScriptPart
+public interface JQRulerChildren
+		extends GlobalChildren
 {
-
-	public JQRulerOptions()
-	{
-		//Not setup yet
-	}
 
 }

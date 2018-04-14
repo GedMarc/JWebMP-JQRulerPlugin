@@ -14,16 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.jqruler;
+package com.jwebmp.components.jqruler;
 
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.base.html.interfaces.AttributeDefinitions;
 
 /**
- * @author Marc Magon
- * @version 1.0
- * @since 07 Aug 2015
+ * @author GedMarc
  */
-public interface JQRulerFeatures extends GlobalFeatures
+public enum JQRulerAttributes
+		implements AttributeDefinitions
 {
+	Visibility;
 
+	@Override
+	public boolean isKeyword()
+	{
+		return false;
+	}
 }

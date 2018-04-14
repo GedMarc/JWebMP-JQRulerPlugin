@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.jqruler;
+package com.jwebmp.components.jqruler;
 
-import za.co.mmagon.jwebswing.Feature;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
-import za.co.mmagon.jwebswing.components.pools.jqruler.JQRulerReferencePool;
+import com.jwebmp.Feature;
+import com.jwebmp.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.components.pools.jqruler.JQRulerReferencePool;
 
 /**
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents
@@ -27,7 +27,9 @@ import za.co.mmagon.jwebswing.components.pools.jqruler.JQRulerReferencePool;
  * @version 1.0
  * @since 2013/01/16
  */
-public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> implements JQRulerFeatures, GlobalFeatures
+public class JQRulerFeature
+		extends Feature<JQRulerOptions, JQRulerFeature>
+		implements JQRulerFeatures, GlobalFeatures
 {
 
 	private static final long serialVersionUID = 1L;
@@ -50,25 +52,11 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 	}
 
 	@Override
-	protected void assignFunctionsToComponent()
+	public int hashCode()
 	{
-		//No queries needed
-	}
-
-	/**
-	 * Returns all the tooltip options
-	 * <p>
-	 *
-	 * @return
-	 */
-	@Override
-	public JQRulerOptions getOptions()
-	{
-		if (options == null)
-		{
-			options = new JQRulerOptions();
-		}
-		return options;
+		int result = super.hashCode();
+		result = 31 * result + (getOptions() != null ? getOptions().hashCode() : 0);
+		return result;
 	}
 
 	@Override
@@ -91,11 +79,25 @@ public class JQRulerFeature extends Feature<JQRulerOptions, JQRulerFeature> impl
 		return getOptions() != null ? getOptions().equals(that.getOptions()) : that.getOptions() == null;
 	}
 
+	/**
+	 * Returns all the tooltip options
+	 * <p>
+	 *
+	 * @return
+	 */
 	@Override
-	public int hashCode()
+	public JQRulerOptions getOptions()
 	{
-		int result = super.hashCode();
-		result = 31 * result + (getOptions() != null ? getOptions().hashCode() : 0);
-		return result;
+		if (options == null)
+		{
+			options = new JQRulerOptions();
+		}
+		return options;
+	}
+
+	@Override
+	protected void assignFunctionsToComponent()
+	{
+		//No queries needed
 	}
 }

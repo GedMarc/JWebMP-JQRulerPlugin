@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.jqruler;
+package com.jwebmp.components.jqruler;
 
-import za.co.mmagon.jwebswing.base.html.Div;
+import com.jwebmp.base.html.Div;
 
 /**
  * An implementation of the jsTree project.
@@ -26,7 +26,8 @@ import za.co.mmagon.jwebswing.base.html.Div;
  * @version 1.0
  * @since 29 Aug 2015
  */
-public class JQRuler extends Div<JQRulerChildren, JQRulerAttributes, JQRulerFeatures, JQRulerEvents, JQRuler>
+public class JQRuler
+		extends Div<JQRulerChildren, JQRulerAttributes, JQRulerFeatures, JQRulerEvents, JQRuler>
 {
 
 	private static final long serialVersionUID = 1L;
