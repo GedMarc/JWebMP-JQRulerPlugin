@@ -14,21 +14,4 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.jqruler;
-
-import com.jwebmp.base.html.interfaces.AttributeDefinitions;
-
-/**
- * @author GedMarc
- */
-public enum JQRulerAttributes
-		implements AttributeDefinitions
-{
-	Visibility;
-
-	@Override
-	public boolean isKeyword()
-	{
-		return false;
-	}
-}
+package com.jwebmp.plugins.jqruler;

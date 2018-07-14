@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.pools.jqruler;
+package com.jwebmp.plugins.jqruler;
 
 import com.jwebmp.base.references.CSSReference;
 import com.jwebmp.base.references.JavascriptReference;
@@ -35,7 +35,8 @@ public enum JQRulerReferencePool
 	CoreOriginal(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuides.js"), null, 80),
 	Core(new JavascriptReference("RulerGuides", 1.0, "javascript/jquery.ruler/RulerGuidesJQuery.js"), null, 80),
 	Event(new JavascriptReference("JQRulerEvent", 1.0, "javascript/jquery.ruler/Event.js", "https://raw.githubusercontent.com/mark-rolich/Event.js/master/Event.js"), null, 79),
-	DragDrop(new JavascriptReference("JQRulerDragDrop", 1.0, "javascript/jquery.ruler/Dragdrap.js"), null, 78),;
+	DragDrop(new JavascriptReference("JQRulerDragDrop", 1.0, "javascript/jquery.ruler/Dragdrap.js"), null, 78),
+	;
 
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;

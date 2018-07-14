@@ -14,26 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.jqruler;
+package com.jwebmp.plugins.jqruler;
 
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.base.html.interfaces.AttributeDefinitions;
 
 /**
- * All the options for the tooltip library
- * <p>
- *
  * @author GedMarc
- * @version 1.0
- * 		<p>
- * 		<p>
- * @since Mar 4, 2015
  */
-public class JQRulerOptions extends JavaScriptPart
+public enum JQRulerAttributes
+		implements AttributeDefinitions
 {
+	Visibility;
 
-	public JQRulerOptions()
+	@Override
+	public boolean isKeyword()
 	{
-		//Not setup yet
+		return false;
 	}
-
 }

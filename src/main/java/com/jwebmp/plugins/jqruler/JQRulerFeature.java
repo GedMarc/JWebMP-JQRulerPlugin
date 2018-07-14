@@ -14,11 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.jqruler;
+package com.jwebmp.plugins.jqruler;
 
 import com.jwebmp.Feature;
 import com.jwebmp.base.html.interfaces.GlobalFeatures;
-import com.jwebmp.components.pools.jqruler.JQRulerReferencePool;
 
 /**
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents
