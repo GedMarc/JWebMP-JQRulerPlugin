@@ -7,4 +7,6 @@ module com.jwebmp.plugins.jqruler {
 
 	requires java.validation;
 	requires java.logging;
+
+	opens com.jwebmp.plugins.jqruler to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
