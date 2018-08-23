@@ -17,7 +17,6 @@
 package com.jwebmp.plugins.jqruler;
 
 import com.jwebmp.core.Feature;
-import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 
 /**
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents
@@ -27,8 +26,7 @@ import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
  * @since 2013/01/16
  */
 public class JQRulerFeature
-		extends Feature<JQRulerOptions, JQRulerFeature>
-		implements JQRulerFeatures, GlobalFeatures
+		extends Feature<JQRulerFeature, JQRulerOptions, JQRulerFeature>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -53,29 +51,13 @@ public class JQRulerFeature
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + (getOptions() != null ? getOptions().hashCode() : 0);
-		return result;
+		return super.hashCode();
 	}
 
 	@Override
-	public boolean equals(Object o)
+	public boolean equals(Object obj)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (!(o instanceof JQRulerFeature))
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		JQRulerFeature that = (JQRulerFeature) o;
-		return getOptions() != null ? getOptions().equals(that.getOptions()) : that.getOptions() == null;
+		return super.equals(obj);
 	}
 
 	/**
