@@ -30,7 +30,6 @@ public class JQRuler
 		extends Div<JQRulerChildren, JQRulerAttributes, JQRulerFeatures, JQRulerEvents, JQRuler>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	private JQRulerFeature feature;
 

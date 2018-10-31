@@ -29,7 +29,6 @@ public class JQRulerFeature
 		extends Feature<JQRulerFeature, JQRulerOptions, JQRulerFeature>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	private JQRulerOptions options;
 
